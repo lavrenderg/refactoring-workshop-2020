@@ -38,6 +38,8 @@ private:
         int y;
         int ttl;
     };
+    Segment createNewHead(Segment currentHead);
+    void clearOldFood(FoodInd receivedFood);
 
     IPort& m_displayPort;
     IPort& m_foodPort;
