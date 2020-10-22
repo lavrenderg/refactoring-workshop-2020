@@ -11,7 +11,7 @@ namespace Snake
 ConfigurationError::ConfigurationError()
     : std::logic_error("Bad configuration of Snake::Controller.")
 {}
-
+//comment new
 UnexpectedEventException::UnexpectedEventException()
     : std::runtime_error("Unexpected event received!")
 {}
