@@ -1,5 +1,5 @@
 #pragma once
-
+#include "EventT.hpp"
 #include <cstdint>
 
 namespace Snake
@@ -25,7 +25,6 @@ struct TimeoutInd
 {
     static constexpr std::uint32_t MESSAGE_ID = 0x20;
 };
-
 enum Cell
 {
     Cell_FREE,
@@ -72,5 +71,9 @@ struct LooseInd
 {
     static constexpr std::uint32_t MESSAGE_ID = 0x71;
 };
+    struct TimeOut : public EventT<TimeoutInd>{};
+    struct DirectionI : public EventT<DirectionInd>{};
+    struct FoodI : public EventT<FoodInd>{};
+    struct FoodRe : public EventT<FoodResp>{};
 
 } // namespace Snake
